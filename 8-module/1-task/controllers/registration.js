@@ -25,9 +25,9 @@ module.exports.register = async (ctx, next) => {
 
     await sendMail({
         template: 'confirmation',
-        locals: {token: verificationToken},
         to: user.email,
-        subject: 'Confirm Email'
+        locals: {token: verificationToken},
+        subject: 'Подтвердите почту',
     });
 
 
