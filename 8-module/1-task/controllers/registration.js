@@ -17,7 +17,7 @@ module.exports.register = async (ctx, next) => {
         displayName: ctx.request.body.displayName,
         verificationToken: verificationToken
     });
-    await user.setPassword(ctx.body.request.password);
+    await user.setPassword(ctx.request.body.password);
     await user.save();
 
     ctx.status = 200;
